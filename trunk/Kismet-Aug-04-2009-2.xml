@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE detection-run SYSTEM "http://kismetwireless.net/kismet-2005-03.dtd">
+
+
+<detection-run kismet-version="2008.05.R1" start-time="Tue Aug  4 13:26:14 2009" end-time="Tue Aug  4 13:49:28 2009">
+  <wireless-network number="1" type="infrastructure" wep="false" cloaked="false" first-time="Tue Aug  4 13:26:15 2009" last-time="Tue Aug  4 13:49:27 2009">
+    <SSID>stargate</SSID>
+    <BSSID>00:0F:B5:DE:95:84</BSSID>
+    <channel>1</channel>
+    <maxrate>18.0</maxrate>
+    <maxseenrate>1000</maxseenrate>
+    <carrier>IEEE 802.11b</carrier>
+    <encryption>None</encryption>
+    <packets>
+      <LLC>1875</LLC>
+      <data>134</data>
+      <crypt>0</crypt>
+      <weak>0</weak>
+      <dupeiv>0</dupeiv>
+      <total>2009</total>
+    </packets>
+    <datasize>18065</datasize>
+    <gps-info unit="english">
+      <min-lat>90.000000</min-lat>
+      <min-lon>180.000000</min-lon>
+      <min-alt>0.000000</min-alt>
+      <min-spd>0.000000</min-spd>
+      <max-lat>-90.000000</max-lat>
+      <max-lon>-180.000000</max-lon>
+      <max-alt>0.000000</max-alt>
+      <max-spd>0.000000</max-spd>
+    </gps-info>
+    <ip-address type="arp">
+      <ip-range>127.0.0.1</ip-range>
+    </ip-address>
+    <wireless-client number="1" type="fromds" wep="false" first-time="Tue Aug  4 13:26:20 2009" last-time="Tue Aug  4 13:49:18 2009">
+      <client-mac>00:1B:90:6C:E8:A4</client-mac>
+      <client-packets>
+        <client-data>75</client-data>
+        <client-crypt>0</client-crypt>
+        <client-weak>0</client-weak>
+      </client-packets>
+      <client-encryption>None</client-encryption>
+      <client-gps-info unit="english">
+        <client-min-lat>90.000000</client-min-lat>
+        <client-min-lon>180.000000</client-min-lon>
+        <client-min-alt>0.000000</client-min-alt>
+        <client-min-spd>0.000000</client-min-spd>
+        <client-max-lat>-90.000000</client-max-lat>
+        <client-max-lon>-180.000000</client-max-lon>
+        <client-max-alt>0.000000</client-max-alt>
+        <client-max-spd>0.000000</client-max-spd>
+      </client-gps-info>
+      <client-datasize>10273</client-datasize>
+      <client-maxrate>0.0</client-maxrate>
+      <client-maxseenrate>1000</client-maxseenrate>
+    </wireless-client>
+    <wireless-client number="2" type="sendto" wep="false" first-time="Tue Aug  4 13:26:20 2009" last-time="Tue Aug  4 13:26:20 2009">
+      <client-mac>01:80:C2:00:00:00</client-mac>
+      <client-packets>
+        <client-data>0</client-data>
+        <client-crypt>0</client-crypt>
+        <client-weak>0</client-weak>
+      </client-packets>
+      <client-encryption>None</client-encryption>
+      <client-datasize>0</client-datasize>
+      <client-maxrate>0.0</client-maxrate>
+      <client-maxseenrate>0</client-maxseenrate>
+    </wireless-client>
+    <wireless-client number="3" type="fromds" wep="false" first-time="Tue Aug  4 13:27:13 2009" last-time="Tue Aug  4 13:48:13 2009">
+      <client-mac>00:0F:B5:DE:95:87</client-mac>
+      <client-packets>
+        <client-data>3</client-data>
+        <client-crypt>0</client-crypt>
+        <client-weak>0</client-weak>
+      </client-packets>
+      <client-encryption>None</client-encryption>
+      <client-gps-info unit="english">
+        <client-min-lat>90.000000</client-min-lat>
+        <client-min-lon>180.000000</client-min-lon>
+        <client-min-alt>0.000000</client-min-alt>
+        <client-min-spd>0.000000</client-min-spd>
+        <client-max-lat>-90.000000</client-max-lat>
+        <client-max-lon>-180.000000</client-max-lon>
+        <client-max-alt>0.000000</client-max-alt>
+        <client-max-spd>0.000000</client-max-spd>
+      </client-gps-info>
+      <client-datasize>234</client-datasize>
+      <client-maxrate>0.0</client-maxrate>
+      <client-maxseenrate>1000</client-maxseenrate>
+      <client-ip-address type="arp">127.0.0.1</client-ip-address>
+    </wireless-client>
+    <wireless-client number="4" type="sendto" wep="false" first-time="Tue Aug  4 13:27:13 2009" last-time="Tue Aug  4 13:27:13 2009">
+      <client-mac>FF:FF:FF:FF:FF:FF</client-mac>
+      <client-packets>
+        <client-data>0</client-data>
+        <client-crypt>0</client-crypt>
+        <client-weak>0</client-weak>
+      </client-packets>
+      <client-encryption>None</client-encryption>
+      <client-datasize>0</client-datasize>
+      <client-maxrate>0.0</client-maxrate>
+      <client-maxseenrate>0</client-maxseenrate>
+    </wireless-client>
+    <wireless-client number="5" type="fromds" wep="false" first-time="Tue Aug  4 13:27:16 2009" last-time="Tue Aug  4 13:44:05 2009">
+      <client-mac>00:26:08:EB:44:17</client-mac>
+      <client-packets>
+        <client-data>12</client-data>
+        <client-crypt>0</client-crypt>
+        <client-weak>0</client-weak>
+      </client-packets>
+      <client-encryption>None</client-encryption>
+      <client-gps-info unit="english">
+        <client-min-lat>90.000000</client-min-lat>
+        <client-min-lon>180.000000</client-min-lon>
+        <client-min-alt>0.000000</client-min-alt>
+        <client-min-spd>0.000000</client-min-spd>
+        <client-max-lat>-90.000000</client-max-lat>
+        <client-max-lon>-180.000000</client-max-lon>
+        <client-max-alt>0.000000</client-max-alt>
+        <client-max-spd>0.000000</client-max-spd>
+      </client-gps-info>
+      <client-datasize>1762</client-datasize>
+      <client-maxrate>0.0</client-maxrate>
+      <client-maxseenrate>1000</client-maxseenrate>
+      <client-ip-address type="udp">172.16.1.116</client-ip-address>
+    </wireless-client>
+    <wireless-client number="6" type="fromds" wep="false" first-time="Tue Aug  4 13:27:22 2009" last-time="Tue Aug  4 13:31:04 2009">
+      <client-mac>00:0F:B5:DE:95:84</client-mac>
+      <client-packets>
+        <client-data>2</client-data>
+        <client-crypt>0</client-crypt>
+        <client-weak>0</client-weak>
+      </client-packets>
+      <client-encryption>None</client-encryption>
+      <client-gps-info unit="english">
+        <client-min-lat>90.000000</client-min-lat>
+        <client-min-lon>180.000000</client-min-lon>
+        <client-min-alt>0.000000</client-min-alt>
+        <client-min-spd>0.000000</client-min-spd>
+        <client-max-lat>-90.000000</client-max-lat>
+        <client-max-lon>-180.000000</client-max-lon>
+        <client-max-alt>0.000000</client-max-alt>
+        <client-max-spd>0.000000</client-max-spd>
+      </client-gps-info>
+      <client-datasize>120</client-datasize>
+      <client-maxrate>0.0</client-maxrate>
+      <client-maxseenrate>1000</client-maxseenrate>
+      <client-ip-address type="arp">127.0.0.1</client-ip-address>
+    </wireless-client>
+    <wireless-client number="7" type="fromds" wep="false" first-time="Tue Aug  4 13:27:24 2009" last-time="Tue Aug  4 13:48:00 2009">
+      <client-mac>00:13:02:A9:BF:F2</client-mac>
+      <client-packets>
+        <client-data>18</client-data>
+        <client-crypt>0</client-crypt>
+        <client-weak>0</client-weak>
+      </client-packets>
+      <client-encryption>None</client-encryption>
+      <client-gps-info unit="english">
+        <client-min-lat>90.000000</client-min-lat>
+        <client-min-lon>180.000000</client-min-lon>
+        <client-min-alt>0.000000</client-min-alt>
+        <client-min-spd>0.000000</client-min-spd>
+        <client-max-lat>-90.000000</client-max-lat>
+        <client-max-lon>-180.000000</client-max-lon>
+        <client-max-alt>0.000000</client-max-alt>
+        <client-max-spd>0.000000</client-max-spd>
+      </client-gps-info>
+      <client-datasize>2131</client-datasize>
+      <client-maxrate>0.0</client-maxrate>
+      <client-maxseenrate>1000</client-maxseenrate>
+    </wireless-client>
+    <wireless-client number="8" type="sendto" wep="false" first-time="Tue Aug  4 13:28:25 2009" last-time="Tue Aug  4 13:28:25 2009">
+      <client-mac>01:00:0C:CC:CC:CC</client-mac>
+      <client-packets>
+        <client-data>0</client-data>
+        <client-crypt>0</client-crypt>
+        <client-weak>0</client-weak>
+      </client-packets>
+      <client-encryption>None</client-encryption>
+      <client-datasize>0</client-datasize>
+      <client-maxrate>0.0</client-maxrate>
+      <client-maxseenrate>0</client-maxseenrate>
+    </wireless-client>
+    <wireless-client number="9" type="fromds" wep="false" first-time="Tue Aug  4 13:30:35 2009" last-time="Tue Aug  4 13:44:35 2009">
+      <client-mac>00:0F:B5:DE:95:85</client-mac>
+      <client-packets>
+        <client-data>5</client-data>
+        <client-crypt>0</client-crypt>
+        <client-weak>0</client-weak>
+      </client-packets>
+      <client-encryption>None</client-encryption>
+      <client-gps-info unit="english">
+        <client-min-lat>90.000000</client-min-lat>
+        <client-min-lon>180.000000</client-min-lon>
+        <client-min-alt>0.000000</client-min-alt>
+        <client-min-spd>0.000000</client-min-spd>
+        <client-max-lat>-90.000000</client-max-lat>
+        <client-max-lon>-180.000000</client-max-lon>
+        <client-max-alt>0.000000</client-max-alt>
+        <client-max-spd>0.000000</client-max-spd>
+      </client-gps-info>
+      <client-datasize>390</client-datasize>
+      <client-maxrate>0.0</client-maxrate>
+      <client-maxseenrate>1000</client-maxseenrate>
+      <client-ip-address type="arp">127.0.0.1</client-ip-address>
+    </wireless-client>
+    <wireless-client number="10" type="fromds" wep="false" first-time="Tue Aug  4 13:31:48 2009" last-time="Tue Aug  4 13:43:48 2009">
+      <client-mac>00:0F:B5:DE:95:86</client-mac>
+      <client-packets>
+        <client-data>2</client-data>
+        <client-crypt>0</client-crypt>
+        <client-weak>0</client-weak>
+      </client-packets>
+      <client-encryption>None</client-encryption>
+      <client-gps-info unit="english">
+        <client-min-lat>90.000000</client-min-lat>
+        <client-min-lon>180.000000</client-min-lon>
+        <client-min-alt>0.000000</client-min-alt>
+        <client-min-spd>0.000000</client-min-spd>
+        <client-max-lat>-90.000000</client-max-lat>
+        <client-max-lon>-180.000000</client-max-lon>
+        <client-max-alt>0.000000</client-max-alt>
+        <client-max-spd>0.000000</client-max-spd>
+      </client-gps-info>
+      <client-datasize>156</client-datasize>
+      <client-maxrate>0.0</client-maxrate>
+      <client-maxseenrate>1000</client-maxseenrate>
+      <client-ip-address type="arp">127.0.0.1</client-ip-address>
+    </wireless-client>
+    <wireless-client number="11" type="sendto" wep="false" first-time="Tue Aug  4 13:32:10 2009" last-time="Tue Aug  4 13:32:10 2009">
+      <client-mac>01:00:5E:00:00:FB</client-mac>
+      <client-packets>
+        <client-data>0</client-data>
+        <client-crypt>0</client-crypt>
+        <client-weak>0</client-weak>
+      </client-packets>
+      <client-encryption>None</client-encryption>
+      <client-datasize>0</client-datasize>
+      <client-maxrate>0.0</client-maxrate>
+      <client-maxseenrate>0</client-maxseenrate>
+    </wireless-client>
+    <wireless-client number="12" type="sendto" wep="false" first-time="Tue Aug  4 13:32:10 2009" last-time="Tue Aug  4 13:32:10 2009">
+      <client-mac>33:33:00:00:00:02</client-mac>
+      <client-packets>
+        <client-data>0</client-data>
+        <client-crypt>0</client-crypt>
+        <client-weak>0</client-weak>
+      </client-packets>
+      <client-encryption>None</client-encryption>
+      <client-datasize>0</client-datasize>
+      <client-maxrate>0.0</client-maxrate>
+      <client-maxseenrate>0</client-maxseenrate>
+    </wireless-client>
+    <wireless-client number="13" type="fromds" wep="false" first-time="Tue Aug  4 13:33:05 2009" last-time="Tue Aug  4 13:45:20 2009">
+      <client-mac>00:12:F0:7D:AB:76</client-mac>
+      <client-packets>
+        <client-data>6</client-data>
+        <client-crypt>0</client-crypt>
+        <client-weak>0</client-weak>
+      </client-packets>
+      <client-encryption>None</client-encryption>
+      <client-gps-info unit="english">
+        <client-min-lat>90.000000</client-min-lat>
+        <client-min-lon>180.000000</client-min-lon>
+        <client-min-alt>0.000000</client-min-alt>
+        <client-min-spd>0.000000</client-min-spd>
+        <client-max-lat>-90.000000</client-max-lat>
+        <client-max-lon>-180.000000</client-max-lon>
+        <client-max-alt>0.000000</client-max-alt>
+        <client-max-spd>0.000000</client-max-spd>
+      </client-gps-info>
+      <client-datasize>964</client-datasize>
+      <client-maxrate>0.0</client-maxrate>
+      <client-maxseenrate>1000</client-maxseenrate>
+      <client-ip-address type="arp">172.16.1.174</client-ip-address>
+    </wireless-client>
+    <wireless-client number="14" type="fromds" wep="false" first-time="Tue Aug  4 13:34:07 2009" last-time="Tue Aug  4 13:48:11 2009">
+      <client-mac>00:16:CE:1B:25:1C</client-mac>
+      <client-packets>
+        <client-data>3</client-data>
+        <client-crypt>0</client-crypt>
+        <client-weak>0</client-weak>
+      </client-packets>
+      <client-encryption>None</client-encryption>
+      <client-gps-info unit="english">
+        <client-min-lat>90.000000</client-min-lat>
+        <client-min-lon>180.000000</client-min-lon>
+        <client-min-alt>0.000000</client-min-alt>
+        <client-min-spd>0.000000</client-min-spd>
+        <client-max-lat>-90.000000</client-max-lat>
+        <client-max-lon>-180.000000</client-max-lon>
+        <client-max-alt>0.000000</client-max-alt>
+        <client-max-spd>0.000000</client-max-spd>
+      </client-gps-info>
+      <client-datasize>774</client-datasize>
+      <client-maxrate>0.0</client-maxrate>
+      <client-maxseenrate>1000</client-maxseenrate>
+    </wireless-client>
+    <wireless-client number="15" type="fromds" wep="false" first-time="Tue Aug  4 13:36:22 2009" last-time="Tue Aug  4 13:36:22 2009">
+      <client-mac>00:0B:7D:14:BF:B1</client-mac>
+      <client-packets>
+        <client-data>1</client-data>
+        <client-crypt>0</client-crypt>
+        <client-weak>0</client-weak>
+      </client-packets>
+      <client-encryption>None</client-encryption>
+      <client-gps-info unit="english">
+        <client-min-lat>90.000000</client-min-lat>
+        <client-min-lon>180.000000</client-min-lon>
+        <client-min-alt>0.000000</client-min-alt>
+        <client-min-spd>0.000000</client-min-spd>
+        <client-max-lat>-90.000000</client-max-lat>
+        <client-max-lon>-180.000000</client-max-lon>
+        <client-max-alt>0.000000</client-max-alt>
+        <client-max-spd>0.000000</client-max-spd>
+      </client-gps-info>
+      <client-datasize>279</client-datasize>
+      <client-maxrate>0.0</client-maxrate>
+      <client-maxseenrate>1000</client-maxseenrate>
+    </wireless-client>
+    <wireless-client number="16" type="fromds" wep="false" first-time="Tue Aug  4 13:37:37 2009" last-time="Tue Aug  4 13:40:37 2009">
+      <client-mac>00:1B:63:04:75:39</client-mac>
+      <client-packets>
+        <client-data>2</client-data>
+        <client-crypt>0</client-crypt>
+        <client-weak>0</client-weak>
+      </client-packets>
+      <client-encryption>None</client-encryption>
+      <client-gps-info unit="english">
+        <client-min-lat>90.000000</client-min-lat>
+        <client-min-lon>180.000000</client-min-lon>
+        <client-min-alt>0.000000</client-min-alt>
+        <client-min-spd>0.000000</client-min-spd>
+        <client-max-lat>-90.000000</client-max-lat>
+        <client-max-lon>-180.000000</client-max-lon>
+        <client-max-alt>0.000000</client-max-alt>
+        <client-max-spd>0.000000</client-max-spd>
+      </client-gps-info>
+      <client-datasize>220</client-datasize>
+      <client-maxrate>0.0</client-maxrate>
+      <client-maxseenrate>1000</client-maxseenrate>
+      <client-ip-address type="udp">172.16.1.143</client-ip-address>
+    </wireless-client>
+    <wireless-client number="17" type="fromds" wep="false" first-time="Tue Aug  4 13:37:54 2009" last-time="Tue Aug  4 13:45:25 2009">
+      <client-mac>00:50:04:A8:E3:7D</client-mac>
+      <client-packets>
+        <client-data>3</client-data>
+        <client-crypt>0</client-crypt>
+        <client-weak>0</client-weak>
+      </client-packets>
+      <client-encryption>None</client-encryption>
+      <client-gps-info unit="english">
+        <client-min-lat>90.000000</client-min-lat>
+        <client-min-lon>180.000000</client-min-lon>
+        <client-min-alt>0.000000</client-min-alt>
+        <client-min-spd>0.000000</client-min-spd>
+        <client-max-lat>-90.000000</client-max-lat>
+        <client-max-lon>-180.000000</client-max-lon>
+        <client-max-alt>0.000000</client-max-alt>
+        <client-max-spd>0.000000</client-max-spd>
+      </client-gps-info>
+      <client-datasize>324</client-datasize>
+      <client-maxrate>0.0</client-maxrate>
+      <client-maxseenrate>1000</client-maxseenrate>
+      <client-ip-address type="udp">172.16.1.1</client-ip-address>
+    </wireless-client>
+    <wireless-client number="18" type="fromds" wep="false" first-time="Tue Aug  4 13:43:01 2009" last-time="Tue Aug  4 13:43:01 2009">
+      <client-mac>00:16:6F:09:D6:14</client-mac>
+      <client-packets>
+        <client-data>1</client-data>
+        <client-crypt>0</client-crypt>
+        <client-weak>0</client-weak>
+      </client-packets>
+      <client-encryption>None</client-encryption>
+      <client-gps-info unit="english">
+        <client-min-lat>90.000000</client-min-lat>
+        <client-min-lon>180.000000</client-min-lon>
+        <client-min-alt>0.000000</client-min-alt>
+        <client-min-spd>0.000000</client-min-spd>
+        <client-max-lat>-90.000000</client-max-lat>
+        <client-max-lon>-180.000000</client-max-lon>
+        <client-max-alt>0.000000</client-max-alt>
+        <client-max-spd>0.000000</client-max-spd>
+      </client-gps-info>
+      <client-datasize>360</client-datasize>
+      <client-maxrate>0.0</client-maxrate>
+      <client-maxseenrate>1000</client-maxseenrate>
+      <client-ip-address type="udp">172.16.1.119</client-ip-address>
+    </wireless-client>
+    <wireless-client number="19" type="sendto" wep="false" first-time="Tue Aug  4 13:43:59 2009" last-time="Tue Aug  4 13:43:59 2009">
+      <client-mac>33:33:00:00:00:FB</client-mac>
+      <client-packets>
+        <client-data>0</client-data>
+        <client-crypt>0</client-crypt>
+        <client-weak>0</client-weak>
+      </client-packets>
+      <client-encryption>None</client-encryption>
+      <client-datasize>0</client-datasize>
+      <client-maxrate>0.0</client-maxrate>
+      <client-maxseenrate>0</client-maxseenrate>
+    </wireless-client>
+    <wireless-client number="20" type="fromds" wep="false" first-time="Tue Aug  4 13:48:56 2009" last-time="Tue Aug  4 13:48:56 2009">
+      <client-mac>00:0F:B5:DE:95:89</client-mac>
+      <client-packets>
+        <client-data>1</client-data>
+        <client-crypt>0</client-crypt>
+        <client-weak>0</client-weak>
+      </client-packets>
+      <client-encryption>None</client-encryption>
+      <client-gps-info unit="english">
+        <client-min-lat>90.000000</client-min-lat>
+        <client-min-lon>180.000000</client-min-lon>
+        <client-min-alt>0.000000</client-min-alt>
+        <client-min-spd>0.000000</client-min-spd>
+        <client-max-lat>-90.000000</client-max-lat>
+        <client-max-lon>-180.000000</client-max-lon>
+        <client-max-alt>0.000000</client-max-alt>
+        <client-max-spd>0.000000</client-max-spd>
+      </client-gps-info>
+      <client-datasize>78</client-datasize>
+      <client-maxrate>0.0</client-maxrate>
+      <client-maxseenrate>1000</client-maxseenrate>
+      <client-ip-address type="arp">127.0.0.1</client-ip-address>
+    </wireless-client>
+    <cisco number="1">
+      <cdp-device-id>s213-25-sw.arlut.utexas.edu</cdp-device-id>
+      <cdp-capability level1="false" igmp-forward="false" netlayer="true" level2-switching="false" level2-sourceroute="true" level2-transparent="false" level3-routing="false"/>
+      <cdp-interface>GigabitEthernet0/36</cdp-interface>
+      <cdp-ip>10.254.2.25</cdp-ip>
+      <cdp-platform>cisco WS-C3560G-48PS</cdp-platform>
+      <cdp-software>Cisco IOS Software, C3560 Software (C3560-IPBASEK9-M), Version 12.2(35)SE1, RELEASE SOFTWARE (fc1)
+Copyright (c) 1986-2006 by Cisco Systems, Inc.
+Compiled Tue 19-Dec-06 10:54 by antonino</cdp-software>
+    </cisco>
+    <cisco number="2">
+      <cdp-device-id>s213-25-sw.arlut.utexas.edu</cdp-device-id>
+      <cdp-capability level1="false" igmp-forward="false" netlayer="true" level2-switching="false" level2-sourceroute="true" level2-transparent="false" level3-routing="false"/>
+      <cdp-interface>GigabitEthernet0/36</cdp-interface>
+      <cdp-ip>10.254.2.25</cdp-ip>
+      <cdp-platform>cisco WS-C3560G-48PS</cdp-platform>
+      <cdp-software>Cisco IOS Software, C3560 Software (C3560-IPBASEK9-M), Version 12.2(35)SE1, RELEASE SOFTWARE (fc1)
+Copyright (c) 1986-2006 by Cisco Systems, Inc.
+Compiled Tue 19-Dec-06 10:54 by antonino</cdp-software>
+    </cisco>
+  </wireless-network>
+  <wireless-network number="2" type="probe" wep="false" cloaked="false" first-time="Tue Aug  4 13:27:35 2009" last-time="Tue Aug  4 13:49:01 2009">
+    <SSID>abbey</SSID>
+    <BSSID>00:18:41:DB:CD:C0</BSSID>
+    <channel>0</channel>
+    <maxrate>22.0</maxrate>
+    <maxseenrate>2000</maxseenrate>
+    <carrier>IEEE 802.11b</carrier>
+    <encryption>None</encryption>
+    <packets>
+      <LLC>100</LLC>
+      <data>0</data>
+      <crypt>0</crypt>
+      <weak>0</weak>
+      <dupeiv>0</dupeiv>
+      <total>100</total>
+    </packets>
+    <datasize>0</datasize>
+    <gps-info unit="english">
+      <min-lat>90.000000</min-lat>
+      <min-lon>180.000000</min-lon>
+      <min-alt>0.000000</min-alt>
+      <min-spd>0.000000</min-spd>
+      <max-lat>-90.000000</max-lat>
+      <max-lon>-180.000000</max-lon>
+      <max-alt>0.000000</max-alt>
+      <max-spd>0.000000</max-spd>
+    </gps-info>
+    <wireless-client number="1" type="tods" wep="false" first-time="Tue Aug  4 13:27:35 2009" last-time="Wed Dec 31 18:00:00 1969">
+      <client-mac>00:18:41:DB:CD:C0</client-mac>
+      <client-packets>
+        <client-data>0</client-data>
+        <client-crypt>0</client-crypt>
+        <client-weak>0</client-weak>
+      </client-packets>
+      <client-encryption>None</client-encryption>
+      <client-datasize>0</client-datasize>
+      <client-maxrate>0.0</client-maxrate>
+      <client-maxseenrate>0</client-maxseenrate>
+    </wireless-client>
+  </wireless-network>
+  <wireless-network number="3" type="probe" wep="false" cloaked="false" first-time="Tue Aug  4 13:29:01 2009" last-time="Tue Aug  4 13:29:01 2009">
+    <BSSID>00:21:E9:9D:67:92</BSSID>
+    <channel>9</channel>
+    <maxrate>18.0</maxrate>
+    <maxseenrate>1000</maxseenrate>
+    <carrier>IEEE 802.11b</carrier>
+    <encryption>None</encryption>
+    <packets>
+      <LLC>1</LLC>
+      <data>0</data>
+      <crypt>0</crypt>
+      <weak>0</weak>
+      <dupeiv>0</dupeiv>
+      <total>1</total>
+    </packets>
+    <datasize>0</datasize>
+    <gps-info unit="english">
+      <min-lat>90.000000</min-lat>
+      <min-lon>180.000000</min-lon>
+      <min-alt>0.000000</min-alt>
+      <min-spd>0.000000</min-spd>
+      <max-lat>-90.000000</max-lat>
+      <max-lon>-180.000000</max-lon>
+      <max-alt>0.000000</max-alt>
+      <max-spd>0.000000</max-spd>
+    </gps-info>
+    <wireless-client number="1" type="tods" wep="false" first-time="Tue Aug  4 13:29:01 2009" last-time="Wed Dec 31 18:00:00 1969">
+      <client-mac>00:21:E9:9D:67:92</client-mac>
+      <client-packets>
+        <client-data>0</client-data>
+        <client-crypt>0</client-crypt>
+        <client-weak>0</client-weak>
+      </client-packets>
+      <client-encryption>None</client-encryption>
+      <client-datasize>0</client-datasize>
+      <client-maxrate>0.0</client-maxrate>
+      <client-maxseenrate>0</client-maxseenrate>
+    </wireless-client>
+  </wireless-network>
+  <wireless-network number="4" type="probe" wep="false" cloaked="false" first-time="Tue Aug  4 13:36:08 2009" last-time="Tue Aug  4 13:36:08 2009">
+    <BSSID>00:25:00:03:B8:54</BSSID>
+    <channel>0</channel>
+    <maxrate>11.0</maxrate>
+    <maxseenrate>1000</maxseenrate>
+    <carrier>IEEE 802.11b</carrier>
+    <encryption>None</encryption>
+    <packets>
+      <LLC>2</LLC>
+      <data>0</data>
+      <crypt>0</crypt>
+      <weak>0</weak>
+      <dupeiv>0</dupeiv>
+      <total>2</total>
+    </packets>
+    <datasize>0</datasize>
+    <gps-info unit="english">
+      <min-lat>90.000000</min-lat>
+      <min-lon>180.000000</min-lon>
+      <min-alt>0.000000</min-alt>
+      <min-spd>0.000000</min-spd>
+      <max-lat>-90.000000</max-lat>
+      <max-lon>-180.000000</max-lon>
+      <max-alt>0.000000</max-alt>
+      <max-spd>0.000000</max-spd>
+    </gps-info>
+    <wireless-client number="1" type="tods" wep="false" first-time="Tue Aug  4 13:36:08 2009" last-time="Wed Dec 31 18:00:00 1969">
+      <client-mac>00:25:00:03:B8:54</client-mac>
+      <client-packets>
+        <client-data>0</client-data>
+        <client-crypt>0</client-crypt>
+        <client-weak>0</client-weak>
+      </client-packets>
+      <client-encryption>None</client-encryption>
+      <client-datasize>0</client-datasize>
+      <client-maxrate>0.0</client-maxrate>
+      <client-maxseenrate>0</client-maxseenrate>
+    </wireless-client>
+  </wireless-network>
+</detection-run>

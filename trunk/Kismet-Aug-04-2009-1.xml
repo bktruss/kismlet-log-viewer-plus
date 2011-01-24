@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE detection-run SYSTEM "http://kismetwireless.net/kismet-2005-03.dtd">
+
+
+<detection-run kismet-version="2008.05.R1" start-time="Tue Aug  4 13:25:44 2009" end-time="Tue Aug  4 13:25:59 2009">
+  <wireless-network number="1" type="infrastructure" wep="false" cloaked="false" first-time="Tue Aug  4 13:25:45 2009" last-time="Tue Aug  4 13:25:59 2009">
+    <SSID>stargate</SSID>
+    <BSSID>00:0F:B5:DE:95:84</BSSID>
+    <channel>1</channel>
+    <maxrate>18.0</maxrate>
+    <maxseenrate>1000</maxseenrate>
+    <carrier>IEEE 802.11b</carrier>
+    <encryption>None</encryption>
+    <packets>
+      <LLC>16</LLC>
+      <data>1</data>
+      <crypt>0</crypt>
+      <weak>0</weak>
+      <dupeiv>0</dupeiv>
+      <total>17</total>
+    </packets>
+    <datasize>129</datasize>
+    <gps-info unit="english">
+      <min-lat>90.000000</min-lat>
+      <min-lon>180.000000</min-lon>
+      <min-alt>0.000000</min-alt>
+      <min-spd>0.000000</min-spd>
+      <max-lat>-90.000000</max-lat>
+      <max-lon>-180.000000</max-lon>
+      <max-alt>0.000000</max-alt>
+      <max-spd>0.000000</max-spd>
+    </gps-info>
+    <ip-address type="arp">
+      <ip-range>127.0.0.1</ip-range>
+    </ip-address>
+    <wireless-client number="1" type="fromds" wep="false" first-time="Tue Aug  4 13:25:46 2009" last-time="Tue Aug  4 13:25:46 2009">
+      <client-mac>00:1B:90:6C:E8:A4</client-mac>
+      <client-packets>
+        <client-data>1</client-data>
+        <client-crypt>0</client-crypt>
+        <client-weak>0</client-weak>
+      </client-packets>
+      <client-encryption>None</client-encryption>
+      <client-gps-info unit="english">
+        <client-min-lat>90.000000</client-min-lat>
+        <client-min-lon>180.000000</client-min-lon>
+        <client-min-alt>0.000000</client-min-alt>
+        <client-min-spd>0.000000</client-min-spd>
+        <client-max-lat>-90.000000</client-max-lat>
+        <client-max-lon>-180.000000</client-max-lon>
+        <client-max-alt>0.000000</client-max-alt>
+        <client-max-spd>0.000000</client-max-spd>
+      </client-gps-info>
+      <client-datasize>129</client-datasize>
+      <client-maxrate>0.0</client-maxrate>
+      <client-maxseenrate>1000</client-maxseenrate>
+    </wireless-client>
+    <wireless-client number="2" type="sendto" wep="false" first-time="Tue Aug  4 13:25:46 2009" last-time="Tue Aug  4 13:25:46 2009">
+      <client-mac>01:80:C2:00:00:00</client-mac>
+      <client-packets>
+        <client-data>0</client-data>
+        <client-crypt>0</client-crypt>
+        <client-weak>0</client-weak>
+      </client-packets>
+      <client-encryption>None</client-encryption>
+      <client-datasize>0</client-datasize>
+      <client-maxrate>0.0</client-maxrate>
+      <client-maxseenrate>0</client-maxseenrate>
+    </wireless-client>
+  </wireless-network>
+</detection-run>
