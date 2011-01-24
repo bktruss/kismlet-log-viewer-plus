@@ -75,27 +75,42 @@ $no_clients_char = "-";
 ##########################################################################################################
 
 use XML::LibXML;
-# If there are no arguments the user isn't using the program correctly
-unless ( @ARGV > 0 ) {
+
+############################################################
+#NOTE: There must be at least 1 argument sent to the program
+############################################################
+unless ( @ARGV > 0 ) 
+{
     print "Usage: $0 <logfile> [-snort]\n";
     exit;
 }
 
+############################################################################
 #The first argument is always the file that we want to process (i.e the log)
+#Sets some variables leading to external URLs
+#############################################################################
 $file = $ARGV[0];
 
 $help_location  = "http://www.mindflip.org/klv/help.html";
 $about_location = "http://www.mindflip.org/klv/about.html";
 $net_stats_link = "$file" . "-kismet-log-view-" . "stats.html";
-#if '-snort' is an argument then we call the do_snort function?
-if ( "$ARGV[1]" eq "-snort" ) {
 
+#####################################################################################################
+#if '-snort' is an argument then we call &do_snort, which I can only assume does something with Snort
+#####################################################################################################
+if ( "$ARGV[1]" eq "-snort" ) 
+{
     print "\nKLV: Running Snort...\n";
 
     &do_snort;
     $snort_ok = 1;
 }
 
+#############################################################
+#Print loading status to the console, do administrative stuff
+#Open the files that are key to identifying AP and Client data
+#Open the Whitelist file (soon to be implemented as a database instead?)
+#############################################################
 print "KLV: Loading AP Manuf Data...\n";
 
 open( AP_FILE, "$ap_manuf_location" );
@@ -108,10 +123,7 @@ open( CLIENT_FILE, "$client_manuf_location" );
 @client_manf = <CLIENT_FILE>;
 close(CLIENT_FILE);
 
-#open the 2 txt files we use to compare
 open( SEEN_BEFORE, "seen.txt");
-@seen_before = <SEEN_BEFORE>;
-close(SEEN_BEFORE);
 
 open (WHITELIST, "whitelist.txt");
 @whitelist = <WHITELIST>;
@@ -128,6 +140,10 @@ $kismet_ver        = $root->getAttribute('kismet-version');
 $kismet_start_time = $root->getAttribute('start-time');
 $kismet_end_time   = $root->getAttribute('end-time');
 
+
+#########################################
+#Print out HTML header template
+#########################################
 print "KLV: Generating main HTML File...\n";
 #prints out the .html
 $html_out_file = "$file" . "-kismet-log-view.html";
@@ -137,7 +153,7 @@ print HTML_OUT <<EOM;
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>Kismet Log Viewer 1.0 - By Brian Foy Jr. </title>
+<title>Kismet Log Viewer 1.1 - By Brian Foy Jr, Enhanced By Jeff Shi. </title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 </head>
 <body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
@@ -173,18 +189,21 @@ print HTML_OUT <<EOM;
       <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">Last 
         Seen</font></div></td>
 	<td width="170"> 
-      <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">New AP?</font></div></td>
-	<td width="170"> 
       <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">Whitelisted?</font></div></td>
   </tr>
 EOM
 
+
+#########################################
+#Extract all the network data
+#########################################
 $total_networks = @networks = $root->getElementsByTagName('wireless-network');
 $total_factory_defaults = 0;
 $total_wep = 0;
 $total_cloaked = 0;
 #Extract all the attributes
-foreach $this_network (@networks) {
+foreach $this_network (@networks) 
+{
 
     $total_clients_this_net = @net_clients =
       $this_network->getElementsByTagName('wireless-client');
@@ -198,25 +217,29 @@ foreach $this_network (@networks) {
 
 	undef $net_device_cloaked;
 
-	if ("$net_cloaked" eq "true") {
-	$net_device_cloaked = 1;  
-	$total_cloaked++;
+	if ("$net_cloaked" eq "true") 
+	{
+		$net_device_cloaked = 1;  
+		$total_cloaked++;
 	} 
 
     $net_carrier = $this_network->getAttribute('carrier');
     $net_first   = $this_network->getAttribute('first-time');
     $net_last    = $this_network->getAttribute('last-time');
-    if ( $temp = $this_network->getElementsByTagName('SSID')->[0] ) {
+    if ( $temp = $this_network->getElementsByTagName('SSID')->[0] ) 
+	{
         $net_ssid =
           $this_network->getElementsByTagName('SSID')
           ->[0]->getFirstChild->getData;
     }
-    elsif ( $temp = $this_network->getElementsByTagName('info')->[0] ) {
+    elsif ( $temp = $this_network->getElementsByTagName('info')->[0] ) 
+	{
         $net_ssid =
           $this_network->getElementsByTagName('info')
           ->[0]->getFirstChild->getData;
     }
-    else {
+    else 
+	{
         $net_ssid = "NA";
     }
     $net_bssid =
@@ -240,16 +263,19 @@ foreach $this_network (@networks) {
 
     $total_packets += $net_packets_total;
 
-    if ( $temp = $this_network->getElementsByTagName('datasize')->[0] ) {
+    if ( $temp = $this_network->getElementsByTagName('datasize')->[0] ) 
+	{
         $net_datasize =
           $this_network->getElementsByTagName('datasize')
           ->[0]->getFirstChild->getData;
     }
-    else {
+    else 
+	{
         $net_datasize = "NA";
     }
 
-    if ( $temp = $this_network->getElementsByTagName('min-lat')->[0] ) {
+    if ( $temp = $this_network->getElementsByTagName('min-lat')->[0] ) 
+	{
         $net_gps_min_lat =
           $this_network->getElementsByTagName('min-lat')
           ->[0]->getFirstChild->getData;
@@ -289,7 +315,8 @@ foreach $this_network (@networks) {
         $net_gps_aprox_map_avilable =
 "(+) <a href=\"$net_gps_aprox_map1\" target=\"_blank\">1</a> <a href=\"$net_gps_aprox_map2\" target=\"_blank\">2</a> <a href=\"$net_gps_aprox_map3\" target=\"_blank\">3</a> <a href=\"$net_gps_aprox_map4\" target=\"_blank\">4</a> <a href=\"$net_gps_aprox_map5\" target=\"_blank\">5</a> (-)";
     }
-    else {
+    else 
+	{
         $net_gps_min_lat            = "NA";
         $net_gps_min_lon            = "NA";
         $net_gps_min_alt            = "NA";
@@ -302,16 +329,19 @@ foreach $this_network (@networks) {
         $net_gps_aprox_map_avilable = "NA";
     }
 
-    if ( $temp = $this_network->getElementsByTagName('ip-range')->[0] ) {
+    if ( $temp = $this_network->getElementsByTagName('ip-range')->[0] ) 
+	{
         $net_ip_range =
           $this_network->getElementsByTagName('ip-range')
           ->[0]->getFirstChild->getData;
         @net_ip_parts = $this_network->getElementsByTagName('ip-address');
-        foreach $this_ip (@net_ip_parts) {
+        foreach $this_ip (@net_ip_parts) 
+		{
             $net_ip_type = $this_ip->getAttribute('type');
         }
     }
-    else {
+    else 
+	{
         $net_ip_range = "NA";
         $net_ip_type  = "NA";
     }
@@ -321,8 +351,9 @@ foreach $this_network (@networks) {
 
     $net_clients_total = @net_clients;
 
-    if ("$net_clients_total" eq "0") {
-    $net_clients_total = "$no_clients_char";
+    if ("$net_clients_total" eq "0") 
+	{
+		$net_clients_total = "$no_clients_char";
     }
 
     $net_clients_link =
