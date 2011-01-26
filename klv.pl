@@ -442,12 +442,14 @@ $net_percent_factory_default = substr($net_percent_factory_default,0,4);
 $net_percent_cloaked = eval($total_cloaked / $total_networks) * 100;
 $net_percent_cloaked = substr($net_percent_cloaked,0,4);
 
-$newap = 'yes';
+$is_whitelisted = 'no';
+$whitelist_td_color = 'EE6363';
 foreach $whitelist (@whitelist)
 {
 	if ($net_ssid eq $whitelist)
 	{
-		$newap = 'no';
+		$is_whitelisted = 'yes';
+		$whitelist_td_color = '66CD00';
 	}
 }
 
@@ -478,7 +480,7 @@ EOM
     print HTML_OUT <<EOM;
 <td width="200"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">$first_parts[0] $first_parts[1] $first_parts[2]<br>$first_parts[3]</font></div></td>
 <td width="200"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">$last_parts[0] $last_parts[1] $last_parts[2]<br>$last_parts[3]</font></div></td>
-<td width="200"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">$newap</font></div></td>
+<td width="200" BGCOLOR=$whitelist_td_color><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">$is_whitelisted</font></div></td>
 </tr>
 EOM
 
