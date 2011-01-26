@@ -442,6 +442,16 @@ $net_percent_factory_default = substr($net_percent_factory_default,0,4);
 $net_percent_cloaked = eval($total_cloaked / $total_networks) * 100;
 $net_percent_cloaked = substr($net_percent_cloaked,0,4);
 
+$newap = 'yes';
+foreach $whitelist (@whitelist)
+{
+	if ($net_ssid eq $whitelist)
+	{
+		$newap = 'no';
+	}
+}
+
+
 print $net_bssid;
 
         print HTML_OUT <<EOM;
@@ -468,10 +478,14 @@ EOM
     print HTML_OUT <<EOM;
 <td width="200"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">$first_parts[0] $first_parts[1] $first_parts[2]<br>$first_parts[3]</font></div></td>
 <td width="200"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">$last_parts[0] $last_parts[1] $last_parts[2]<br>$last_parts[3]</font></div></td>
-<td width="200"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">Yes</font></div></td>
-<td width="200"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">No</font></div></td>
+<td width="200"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">$newap</font></div></td>
 </tr>
 EOM
+
+
+######################################################
+#Here we generate a separate page for each detected AP
+#######################################################
 
     print "KLV: Generating details for network #$net_number ($net_ssid) ...\n";
 
