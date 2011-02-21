@@ -123,8 +123,6 @@ open( CLIENT_FILE, "$client_manuf_location" );
 @client_manf = <CLIENT_FILE>;
 close(CLIENT_FILE);
 
-open( SEEN_BEFORE, "seen.txt");
-
 open (WHITELIST, "whitelist.txt");
 @whitelist = <WHITELIST>;
 close (WHITELIST);
