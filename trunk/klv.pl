@@ -123,6 +123,10 @@ open( CLIENT_FILE, "$client_manuf_location" );
 @client_manf = <CLIENT_FILE>;
 close(CLIENT_FILE);
 
+open (AUTHORIZED, "authorized.txt");
+@authorized = <AUTHORIZED>;
+close (AUTHORIZED);
+
 open (WHITELIST, "whitelist.txt");
 @whitelist = <WHITELIST>;
 close (WHITELIST);
@@ -187,7 +191,9 @@ print HTML_OUT <<EOM;
       <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">Last 
         Seen</font></div></td>
 	<td width="170"> 
-      <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">Whitelisted?</font></div></td>
+      <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">Is Authorized?</font></div></td>
+	  <td width="170"> 
+      <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">Is Whitelisted?</font></div></td>
   </tr>
 EOM
 
@@ -440,13 +446,24 @@ $net_percent_factory_default = substr($net_percent_factory_default,0,4);
 $net_percent_cloaked = eval($total_cloaked / $total_networks) * 100;
 $net_percent_cloaked = substr($net_percent_cloaked,0,4);
 
-$is_whitelisted = 'no';
+$is_authorized = 'no';
+$authorized_td_color = 'EE6363';
+foreach $authorized (@authorized)
+{
+	if ($net_ssid eq $authorized)
+	{
+		$is_authorized = 'yes';
+		$authorized_td_color = '66CD00';
+	}
+}
+
+$is_whitelist = 'no';
 $whitelist_td_color = 'EE6363';
 foreach $whitelist (@whitelist)
 {
 	if ($net_ssid eq $whitelist)
 	{
-		$is_whitelisted = 'yes';
+		$is_whitelist = 'yes';
 		$whitelist_td_color = '66CD00';
 	}
 }
@@ -478,7 +495,8 @@ EOM
     print HTML_OUT <<EOM;
 <td width="200"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">$first_parts[0] $first_parts[1] $first_parts[2]<br>$first_parts[3]</font></div></td>
 <td width="200"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">$last_parts[0] $last_parts[1] $last_parts[2]<br>$last_parts[3]</font></div></td>
-<td width="200" BGCOLOR=$whitelist_td_color><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">$is_whitelisted</font></div></td>
+<td width="200" BGCOLOR=$authorized_td_color><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">$is_authorized</font></div></td>
+<td width="200" BGCOLOR=$whitelist_td_color><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">$is_whitelist</font></div></td>
 </tr>
 EOM
 
